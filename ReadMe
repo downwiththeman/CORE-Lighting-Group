@@ -1,0 +1,12 @@
+Here you'll find a listing of all the color patterns and libraries that we are using for the Utah Core Project.
+
+LPD6803.cpp/h and TimerOne.cpp/h are the four library files that are required to compile most of these projects, you can just include them in the folder in which you are building your project from, or they can be installed into the Arduino software library.
+
+Patterns:
+AquaTest.pde - Switches between two blue colors randomly on the string
+ChasingRainbowStrobe.pde - Strobes lights on and off while chasing itself and changing colors at the end of the string
+ColorWipe.pde - Chooses a random color - lights the string up, then turns it off in reverse
+FireTest.pde - Switches between two red colors randomly on the string
+RainbowFader.pde - Takes all the lights on the string and randomly morph them between RGB
+
+strandtest_* - needs to be parsed and looked through still =)
