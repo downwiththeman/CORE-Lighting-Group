@@ -1,5 +1,7 @@
 #include <TimerOne.h>
 
+// Choose which 2 pins you will use for output.
+// Can be any valid output pins.
 int clockPin = 3;
 int dataPin = 2;
 int lightCount = 20;
@@ -151,9 +153,10 @@ void ChasingRainbowStrobeFunction(uint8_t wait){
   
   unsigned int Counter, Counter2;
   
-  for(Counter=0;Counter < 20;Counter++){
-    for(Counter2=0; Counter2 < 20 ; Counter2++){
-      Display[Counter2] = Wheel(Counter * 10 + Counter2);
+  for(Counter=0;Counter < lightCount;Counter++){
+    for(Counter2=0; Counter2 < lightCount; Counter2++){
+      Display[Counter2] = Wheel(Counter * 10 + Counter2); //changes color after filling the whole strand
+      //Display[Counter2] = Wheel(Counter2 * 10 + Counter2); //changes color each light of the strand
       show();
       delay(wait);
       Display[Counter2] = Color(0,0,0) ;     
